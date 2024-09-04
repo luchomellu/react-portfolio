@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    font-style: normal;
+    font-weight: normal;
+    src: url(./assets/fonts/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    font-style: normal;
+    font-weight: bold;
+    src: url(./assets/fonts/IBMPlexMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    font-style: italic;
+    font-weight: bold;
+    src: url(./assets/fonts/IBMPlexMono-BoldItalic.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+h1{
+    font-size: 4vw;
+    font-weight: 1000;
+    font-family: 'IBMPlexMono', normal;
+}
+
+body{
+    background-color: #FFF9C9;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header{
+    top: 0;
+    display: flex;
+    border: solid 0.125rem #121212;
+    height: 100px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    background-color: aliceblue;
+    position: sticky;
+    z-index: 1;
+}
+
+main{
+    border: solid 0.125rem #121212;
+    border-top: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #f0f8ff;
+    box-shadow: 0.35rem 0.35rem #121212;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+main .about-me h1{
+    text-align: center;
+    letter-spacing: 0.05vh;
+    word-spacing: -1.35vh;
+}
+
+main .polaroid{
+    width: 80%;
+    background-color: #fff;
+    padding: 1.25rem;
+    box-shadow: 0.35rem 0.35rem #121212;
+    border: solid 0.125rem #121212;
+    transform: skew(-2deg);
+    display: flex;
+    flex-direction: column;
+}
+
+main .polaroid img{
+    max-width: 100%;
+    border: solid 0.125rem #121212;
+    height: auto;
+}
+
+main .polaroid p{
+    margin-top: 10px;
+    padding-left: 8px;
+}
