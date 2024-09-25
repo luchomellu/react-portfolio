@@ -43,60 +43,106 @@ body{
 
 }
 
-header{
-    top: 0;
-    display: flex;
-    border: solid 0.125rem #121212;
-    height: 100px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
-    background-color: aliceblue;
-    position: sticky;
-    z-index: 1;
-}
-
 main{
-    border: solid 0.125rem #121212;
-    border-top: none;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    border: solid 0.25rem #121212;
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
     background-color: #f0f8ff;
-    box-shadow: 0.35rem 0.35rem #121212;
+    box-shadow: 0.45rem 0.35rem #121212;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-bottom: 15px;
+    padding-top: 35px;
 }
 
-main .about-me h1{
+main h1{
     text-align: center;
-    letter-spacing: 0.05vh;
-    word-spacing: -1.35vh;
+    font-weight: bold;
 }
 
-main .polaroid{
-    width: 80%;
-    background-color: #fff;
-    padding: 1.25rem;
-    box-shadow: 0.35rem 0.35rem #121212;
-    border: solid 0.125rem #121212;
-    transform: skew(-2deg);
+main .socialsandpic{
+    display: flex;
+}
+
+main .socialsandpic .socials{
+    width: 40%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-main .polaroid img{
-    max-width: 100%;
-    border: solid 0.125rem #121212;
-    height: auto;
+main .links{
+    display: flex;
+    align-items: center;
+    
 }
 
-main .polaroid p{
+main .linkedinLogo{
+    width: 100%;
+}
+
+main .gitLogo{
+    width: 75%;
+}
+
+main .socialsandpic .polaroid{
+    width: 60%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+    box-shadow: 0.35rem 0.35rem #121212;
+    border: solid 0.15rem #121212;
+    transform: skew(-2.5deg);
+    display: flex;
+}
+
+main .socialsandpic .polaroid .pic{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 0.15rem #121212;
+}
+
+main .socialsandpic .polaroid p{
     margin-top: 10px;
     padding-left: 8px;
 }
+
+main .text-bubble{
+    display: flex;
+    padding: 15px;
+    border-radius: 24px;
+    border: solid 3px #121212;
+    text-align: center;
+    position: relative;
+}
+
+main .text-bubble::before{
+    content: '';
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #121212;
+    top: -30px;
+    right: 20px;
+}
+
+main .text-bubble::after{
+    content: '';
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #ffff;
+    top: -27px;
+    right: 20px;
+}
+
