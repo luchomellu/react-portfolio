@@ -1,4 +1,36 @@
 .repo{
     width: 100%;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+.repo:hover{
+    background-color: #0000001a;
+}
+
+.repo img{
+    height: 43px;
+}
+
+.dataRepo{
+    padding-left: 10px;
+}
+
+.repo a{
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.repo:hover a{
+    font-weight: 700;
+    font-size: 1.05em;
+    text-decoration: underline;
+}
+
+.dataRepo p{
+    font-size: 0.8em;
 }

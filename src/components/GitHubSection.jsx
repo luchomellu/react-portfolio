@@ -1,5 +1,8 @@
 import React, { useState,useEffect,useRef } from 'react'
 import GitHubRepository from './GitHubRepository'
+import styles from './GitHubSection.module.css';
+import circle from '../assets/svgs/circle-svgrepo-com.svg';
+import clear from '../assets/svgs/clear-svgrepo-com.svg';
 
 const GitHubSection = () => {
     const [repos, setRepos] = useState([]);
@@ -29,20 +32,31 @@ const GitHubSection = () => {
     }, []);
 
     return (
-        <section>
-            <h2>mis repositorios de github:</h2>
-            <div className='lis-repos'>
-                {loading ? (
-                    <h1>Cargando......</h1>
-                ) : repos == [] ? (
-                    <h2>No hay repositorios disponibles.</h2>
-                ) : (
-                    <>
-                    {repos.map((repo) => (
-                        <GitHubRepository key={ repo.id } repo={ repo } /> 
-                    ))}
-                    </>
-                )}
+        <section className={styles.repos}>
+            <div className={styles.barra}>
+                <div className={styles.iconos}>
+                    <img src={circle} alt="" />
+                    <img src={circle} alt="" />
+                    <span>
+                        <img src={clear} alt="" />
+                    </span>
+                </div>
+            </div>
+            <div className={styles.contenido}>
+                <h2>Mis repositorios de github!</h2>
+                <div className='lis-repos'>
+                    {loading ? (
+                        <h1>Cargando......</h1>
+                    ) : repos == [] ? (
+                        <h2>No hay repositorios disponibles.</h2>
+                    ) : (
+                        <>
+                        {repos.map((repo) => (
+                            <GitHubRepository key={ repo.id } repo={ repo } /> 
+                        ))}
+                        </>
+                    )}
+                </div>
             </div>
         </section>
     )

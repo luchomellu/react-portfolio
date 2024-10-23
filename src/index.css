@@ -122,6 +122,7 @@ main .text-bubble{
     border: solid 3px #121212;
     text-align: center;
     position: relative;
+    font-weight: 600;
 }
 
 main .text-bubble::before{

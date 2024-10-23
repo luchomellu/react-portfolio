@@ -1,16 +1,21 @@
 import React from 'react'
 import styles from './GitHubRepository.module.css';
+import codesvg from '../assets/svgs/code-svgrepo-com.svg'
 
 const GitHubRepository = ( { repo } ) => {
   return (
     <div className={styles.repo}>
-        <a href={repo.svn_url}>{repo.name}</a>
-        {repo.description != null ? (
-          <h3>{repo.description}</h3>
-        ) :
-        (
-          <h3>Sin descripcion</h3>
-        )}
+        <img src={codesvg} alt="" />
+        <div className={styles.dataRepo}>
+          <a href={repo.svn_url}>{repo.name}</a>
+          {repo.description != null ? (
+            <p>{repo.description}</p>
+          ) :
+          (
+            <p>Sin descripcion</p>
+          )}
+        </div>
+        
     </div>
   )
 }
