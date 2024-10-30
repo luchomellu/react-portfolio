@@ -1,0 +1,12 @@
+.textoide{
+    display: grid; 
+}
+
+.textoide > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+.invisible{
+    opacity: 0;
+}
