@@ -20,6 +20,7 @@ const DownloadCV = () => {
         </div>
         <div className={styles.contenidoDW}>
             <h2>Descarga mi curriculum!</h2>
+            <iframe src="https://giphy.com/embed/MxYQrB9jeGzza"></iframe>  
             <div className={styles.cvs}>
                 <a href={cvES} download="MellusoLucianoCV-ES.pdf">
                     <img src={downloadSVG} alt="" />

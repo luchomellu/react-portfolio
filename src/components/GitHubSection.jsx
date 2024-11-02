@@ -34,6 +34,7 @@ const GitHubSection = () => {
     return (
         <section className={styles.repos}>
             <div className={styles.barra}>
+                <p>---- repositorios.txt ----</p>
                 <div className={styles.iconos}>
                     <img src={circle} alt="" />
                     <img src={circle} alt="" />
