@@ -22,6 +22,7 @@
 .barra p{
     margin: 0; /* Centra horizontalmente el <p> */
 }
+
 .iconos{
     display: flex;
     flex-direction: row;

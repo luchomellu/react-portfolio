@@ -2,45 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 500px){
-    main{
-        max-width: 75%;
-    }
-
-    main h1{
-        font-size: 3vw;
-    }
-}
-
-@media (min-width: 670px) {
-    main{
-        max-width: 50%;
-    }
-}
-/*
-@font-face {
-    font-family: 'IBMPlexMono';
-    font-style: normal;
-    font-weight: normal;
-    src: url(./assets/fonts/IBMPlexMono-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'IBMPlexMono';
-    font-style: normal;
-    font-weight: bold;
-    src: url(./assets/fonts/IBMPlexMono-Bold.ttf);
-}
-
-@font-face {
-    font-family: 'IBMPlexMono';
-    font-style: italic;
-    font-weight: bold;
-    src: url(./assets/fonts/IBMPlexMono-BoldItalic.ttf);
-}
-
-*/
-
 @font-face {
     font-family: 'GNU Unifont';
     src: url('./assets/fonts/unifont-16.0.01.otf');
@@ -54,14 +15,6 @@
     
 }
 
-/*
-h1{
-    font-size: 4.3vw;
-    font-weight: 1000;
-    font-family: 'IBMPlexMono', normal;
-}
-*/
-
 body{
     background-color: #FFF9C9;
     background-image: url(./assets/images/texture3.png);
@@ -70,16 +23,21 @@ body{
     align-items: center;
 }
 
+/*
 #root{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+*/
+
+/* ---------------------------------------------- MAIN ---------------------------------------------- */
 
 main{
     border: solid 0.25rem #121212;
     border-radius: 8px;
     width: 90%;
+    max-width: 720px;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
@@ -98,37 +56,111 @@ main > *{
 }
 
 main h1{
+    font-size: 2em;
     text-align: center;
     font-weight: bold;
 }
 
-main .socialsandpic{
-    display: flex;
+/* ---------------------------------------------- AboutMe ---------------------------------------------- */
+
+main .aboutMe{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
 }
 
-main .socialsandpic .socials{
-    width: 40%;
+/* ---------------------------------------------- SocialsAndPic ---------------------------------------------- */
+
+main .socialsandpic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+main .contenedorSocials{
+    width: 50%;
+    padding: 0.5em;
+}
+
+main .socials {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 14px;
+    border: 3px solid #121212;
+    overflow: hidden;
+    background-color: #121212;
+    padding-bottom: 2em;
+    font-size: 0.9em;
 }
 
-main .links{
-    display: flex;
-    align-items: center;
-    
-}
-
-main .linkedinLogo{
+.socials .links{
+    padding-inline: 0.2rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-main .gitLogo{
-    width: 75%;
+.socials .links a, .socials .links p{
+    color: #f0f8ff;
+}
+
+.socials .links a{
+    margin-left: 1em;
+}
+
+.links p{
+    margin-bottom: 7px;
+}
+.socials .links a:hover, .socials .links a:focus{
+    color: #121212;
+    background-color: #f0f8ff;
+    text-decoration: underline;
+}
+
+main .socialsandpic .barruli{
+    width: 100%;
+    height: 27px;
+    background-color: #7c1c9e;
+    background-image:url(./assets/images/texture3.png);
+    border-bottom: 3px solid #121212;
+    display: flex;
+    justify-content: space-between; /* Centrar el <p> en todo el ancho del contenedor */
+    align-items: center;
+    position: relative; /* Necesario para posicionar los iconos con position: absolute */
+    padding-left: 0.4rem;
+}
+
+.iconubis{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 2px;
+}
+
+.iconubis img{
+    height: 27px;
+}
+
+.iconubis span img{
+    height: 25px;
+}
+
+/* ---------------------------------------------- Polaroid ---------------------------------------------- */
+
+main .contenedorPolaroid{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 main .socialsandpic .polaroid{
-    width: 60%;
+    width: 100%;
     max-width: 260px;
     background-color: #fff;
     padding: 0.5rem;
@@ -151,6 +183,8 @@ main .socialsandpic .polaroid p{
     margin-top: 10px;
     padding-left: 8px;
 }
+
+/* ---------------------------------------------- Text Bubble ---------------------------------------------- */
 
 main .text-bubble{
     display: flex;

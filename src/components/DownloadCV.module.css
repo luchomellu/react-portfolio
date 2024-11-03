@@ -43,8 +43,12 @@
 }
 
 .contenidoDW{
+    /*
     display: flex;
     flex-direction: row;
+    */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px , 1fr));
     width: 100%;
     padding-inline: 10px;
     padding-top: 5px;
@@ -52,7 +56,6 @@
 }
 
 .contenidoDW a{
-    width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;

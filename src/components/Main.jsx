@@ -6,6 +6,8 @@ import gitLogo from '../assets/svgs/github-svgrepo-com.svg';
 import linkedinLogo from '../assets/svgs/linkedin-svgrepo-com.svg';
 import DownloadCV from './DownloadCV';
 import stilo from './Main.module.css';
+import circle from '../assets/svgs/circle-svgrepo-com.svg';
+import clear from '../assets/svgs/clear-svgrepo-com.svg';
 
 const Main = () => {
   const presentationRef = useRef(null);
@@ -32,19 +34,30 @@ const Main = () => {
           <h1 className={stilo.invisible}>Hola! Mi nombre es Luciano Melluso y soy desarrollador de software!</h1>
         </div>
         <div className='socialsandpic'>
-          <div className='socials'>
-            <h2>Seguime en mis redes!</h2>
-            <div className='links'>
-              <a href="https://github.com/luchomellu">
-                <img src={gitLogo} alt="" className='gitLogo'/>
-              </a>
-              <a href="https://www.linkedin.com/in/luchomellu/">
-                <img src={linkedinLogo} alt="" className='linkedinLogo'/>
-              </a>
+          <div className='contenedorSocials'>
+            <div className='socials'>
+              <div className="barruli">
+                <p>-- socials.exe --</p>
+                <div className="iconubis">
+                    <img src={circle} alt="" />
+                    <img src={circle} alt="" />
+                    <span>
+                        <img src={clear} alt="" />
+                    </span>
+                </div>
+              </div>
+              <div className='links'>
+                <p>C:\Users\my-portfolio\social-links.txt</p>
+                <a href="https://github.com/luchomellu">{'> Visita mi Github!'}</a>
+                <a href="https://www.linkedin.com/in/luchomellu/">{'> Seguime en Linkedin!'}</a>
+                <a href="mailto:lmelluso.dev@gmail.com">{'> Contactame via email! '}</a>
+              </div>
             </div>
           </div>
-          <div className='polaroid'>
-            <img src={myPicture} alt="" className='pic'/>
+          <div className='contenedorPolaroid'>
+            <div className='polaroid'>
+              <img src={myPicture} alt="" className='pic'/>
+            </div>
           </div>
         </div>
         <div className='text-bubble'>

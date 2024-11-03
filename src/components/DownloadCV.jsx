@@ -38,18 +38,19 @@ const DownloadCV = () => {
 
             </div>
             */}
-            <a href="">
+            
+            <a href={cvES} download="MellusoLucianoCV-ES.pdf">
                 <img src={pdf} alt="" />
                 <p>MellusoLucianoCV-ES.pdf</p>
             </a>
-            <a href="">
+            <a href={cvEN} download="MellusoLucianoCV-EN.pdf">
                 <img src={pdf} alt="" />
                 <p>MellusoLucianoCV-EN.pdf</p>
             </a>
             <a href="">
                 <img src={gif} alt="" />
                 <p>jijiji.pdf</p>
-            </a>
+            </a>          
         </div>
     </div>
   )
