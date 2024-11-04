@@ -31,6 +31,21 @@ body{
 }
 */
 
+@media (max-width: 600px){
+    main .socialsandpic{
+        flex-direction: column !important;
+    }
+
+    main .contenedorSocials{
+        width: 100% !important;
+        padding: 1em !important;
+    }
+
+    main .contenedorPolaroid{
+        width: 100% !important; 
+    }
+}
+
 /* ---------------------------------------------- MAIN ---------------------------------------------- */
 
 main{

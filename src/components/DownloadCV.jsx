@@ -21,24 +21,6 @@ const DownloadCV = () => {
             </div>
         </div>
         <div className={styles.contenidoDW}>
-            {/*
-            <h2>Descarga mi curriculum!</h2>
-            <iframe src="https://giphy.com/embed/MxYQrB9jeGzza"></iframe>  
-            <div className={styles.cvs}>
-                
-                <a href={cvES} download="MellusoLucianoCV-ES.pdf">
-                    <img src={downloadSVG} alt="" />
-                    <h3>Español</h3>
-                </a>
-                <a href={cvEN} download="MellusoLucianoCV-EN.pdf">
-                    <img src={downloadSVG} alt="" />
-                    <h3>Ingles</h3>
-                </a>
-                
-
-            </div>
-            */}
-            
             <a href={cvES} download="MellusoLucianoCV-ES.pdf">
                 <img src={pdf} alt="" />
                 <p>MellusoLucianoCV-ES.pdf</p>
