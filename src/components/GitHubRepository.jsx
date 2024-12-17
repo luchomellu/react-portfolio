@@ -1,13 +1,19 @@
 import React from 'react'
 import styles from './GitHubRepository.module.css';
-import codesvg from '../assets/svgs/code-svgrepo-com.svg'
+import images from '../assets/win98images';
+import overlayShortcut from '../assets/images/linkMio.png';
 
 const GitHubRepository = ( { repo } ) => {
   return (
     <div className={styles.repo}>
-        <img src={codesvg} alt="" />
+        <img src={images[repo.topics[0]] || images[""]} alt="" />
         <div className={styles.dataRepo}>
-          <a href={repo.svn_url}>{repo.name}</a>
+          <a href={repo.svn_url}> 
+            <h4>{repo.name}</h4> 
+            <span class={styles.shortcut}> 
+              <img src={overlayShortcut}/>
+            </span>
+          </a>
           {repo.description != null ? (
             <p>{repo.description}</p>
           ) :
@@ -15,7 +21,6 @@ const GitHubRepository = ( { repo } ) => {
             <p>Sin descripcion</p>
           )}
         </div>
-        
     </div>
   )
 }

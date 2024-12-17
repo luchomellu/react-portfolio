@@ -3,17 +3,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     padding-top: 8px;
     padding-bottom: 7px;
+    background-color: #eee;
+    border-bottom: 1px solid #464646;
 }
 
 .repo:hover{
-    background-color: #0000001a;
+    background-color: #5a5a5a1a;
 }
 
 .repo img{
     height: 43px;
+    align-self: self-start;
+    margin-top: 0.6em;
+    image-rendering: pixelated; /* Para navegadores modernos */
+    image-rendering: crisp-edges; /* Para compatibilidad adicional */
+    -ms-interpolation-mode: nearest-neighbor; /* Para Internet Explorer */
 }
 
 .dataRepo{
@@ -21,14 +29,38 @@
 }
 
 .repo a{
-    font-weight: 500;
-    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-.repo:hover a{
+.repo a h4{
+    font-weight: 500;
+    font-size: 1.1em;   
+}
+
+.repo a img{
+    height: 60%;
+    margin-top: 0;
+}
+
+.shortcut{
+    height: 1.1em;
+    align-items: center;
+    display: none;
+}
+
+.repo:hover a h4{
     font-weight: 700;
-    font-size: 1.05em;
+    font-size: 1.1em;
     text-decoration: underline;
+}
+
+.repo:hover a > .shortcut{
+    display: block;
+    position: absolute;
+    bottom: -0.4rem;
+    left: -0.2rem;
 }
 
 .dataRepo p{

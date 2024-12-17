@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------- AboutMe ---------------------------------------------- */
+
+.aboutMe{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+}
+
+.textoide{
+    display: grid; 
+    width: 100%;
+    height: 30vh;
+    align-items: center;
+}
+
+.textoide > * {
+    height: 100%;
+    align-content: center;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+.invisible{
+    opacity: 0;
+}
+
+/* ---------------------------------------------- SocialsAndPic ---------------------------------------------- */
+
+.socialsandpic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.contenedorSocials{
+    width: 50%;
+    padding: 0.5em;
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    border: 3px solid #121212;
+    overflow: hidden;
+    background-color: #121212;
+    padding-bottom: 2em;
+    font-size: 0.9em;
+}
+
+.links{
+    padding-inline: 0.2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.socials .links a, .socials .links p{
+    color: #f0f8ff;
+}
+
+.socials .links a{
+    margin-left: 1em;
+}
+
+.links p{
+    margin-bottom: 7px;
+}
+.socials .links a:hover, .socials .links a:focus{
+    color: #121212;
+    background-color: #f0f8ff;
+    text-decoration: underline;
+}
+
+.socialsandpic .barruli{
+    width: 100%;
+    height: 27px;
+    background-color: #7c1c9e;
+    background-image:url(./assets/images/texture3.png);
+    border-bottom: 3px solid #121212;
+    display: flex;
+    justify-content: space-between; /* Centrar el <p> en todo el ancho del contenedor */
+    align-items: center;
+    position: relative; /* Necesario para posicionar los iconos con position: absolute */
+    padding-left: 0.4rem;
+}
+
+.iconubis{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 2px;
+}
+
+.iconubis img{
+    height: 27px;
+}
+
+.iconubis span img{
+    height: 25px;
+}
+
+/* ---------------------------------------------- Polaroid ---------------------------------------------- */
+
+.contenedorPolaroid{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socialsandpic .polaroid{
+    width: 100%;
+    max-width: 260px;
+    background-color: #fff;
+    padding: 0.5rem;
+    padding-bottom: 2rem;
+    box-shadow: 0.35rem 0.35rem #121212;
+    border: solid 0.15rem #121212;
+    transform: skew(-2.5deg);
+    display: flex;
+}
+
+.socialsandpic .polaroid .pic{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 0.15rem #121212;
+}
+
+.socialsandpic .polaroid p{
+    margin-top: 10px;
+    padding-left: 8px;
+}
+
+/* ---------------------------------------------- Text Bubble ---------------------------------------------- */
+
+.textBubble{
+    display: flex;
+    padding: 15px;
+    border-radius: 24px;
+    border: solid 3px #121212;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+}
+
+.textBubble::before{
+    content: '';
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #121212;
+    top: -29px;
+    right: 20px;
+}
+
+.textBubble::after{
+    content: '';
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid #ffff;
+    top: -25px;
+    right: 20px;
+}

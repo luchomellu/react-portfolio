@@ -1,41 +1,35 @@
 import React from 'react'
 import styles from './DownloadCV.module.css';
-import circle from '../assets/svgs/circle-svgrepo-com.svg';
-import clear from '../assets/svgs/clear-svgrepo-com.svg';
 import cvES from '../assets/cvs/MellusoLucianoES.pdf';
 import cvEN from '../assets/cvs/MellusoLucianoEN.pdf';
-import pdf from '../assets/svgs/pdf.svg'
+import pdf from '../assets/images/directory_closed-4.png'
+import folder from '../assets/images/carpetaLucho.png';
 import gif from '../assets/svgs/gif.svg'
+import WinBar from './WinBar';
 
 const DownloadCV = () => {
-  return (
-    <div className={styles.downloadSection}>
-        <div className={styles.barraDW}>
-            <p>---- descarga.zip ----</p>
-            <div className={styles.iconosDW}>
-                <img src={circle} alt="" />
-                <img src={circle} alt="" />
-                <span>
-                    <img src={clear} alt="" />
-                </span>
+    const windowName = "Descargas.zip";
+    const windowColor = "rgb(255,105,6)";
+
+    return (
+        <div className={styles.downloadSection}>
+            <WinBar name={windowName} color={windowColor} img={folder}/>
+            <div className={styles.contenidoDW}>
+                <a href={cvES} download="MellusoLucianoCV-ES.pdf">
+                    <img src={pdf} alt="" />
+                    <p>MellusoLucianoCV-ES.pdf</p>
+                </a>
+                <a href={cvEN} download="MellusoLucianoCV-EN.pdf">
+                    <img src={pdf} alt="" />
+                    <p>MellusoLucianoCV-EN.pdf</p>
+                </a>
+                <a href="">
+                    <img src={gif} alt="" />
+                    <p>jijiji.pdf</p>
+                </a>          
             </div>
         </div>
-        <div className={styles.contenidoDW}>
-            <a href={cvES} download="MellusoLucianoCV-ES.pdf">
-                <img src={pdf} alt="" />
-                <p>MellusoLucianoCV-ES.pdf</p>
-            </a>
-            <a href={cvEN} download="MellusoLucianoCV-EN.pdf">
-                <img src={pdf} alt="" />
-                <p>MellusoLucianoCV-EN.pdf</p>
-            </a>
-            <a href="">
-                <img src={gif} alt="" />
-                <p>jijiji.pdf</p>
-            </a>          
-        </div>
-    </div>
-  )
+    )
 }
 
 export default DownloadCV
