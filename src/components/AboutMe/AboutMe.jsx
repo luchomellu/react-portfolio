@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, useRef } from 'react';
 import stilo from './AboutMe.module.css';
-import myPicture from '../assets/images/pic.jpg';
-import WinBar from './WinBar';
-import console from '../assets/images/consolaChikita.png';
+import myPicture from '../..//assets/images/pic.jpg';
+import WinBar from '../WinBar';
+import console from '../..//assets/images/consolaChikita.png';
 
 const AboutMe = () => {
 
