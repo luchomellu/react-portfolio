@@ -7,6 +7,7 @@ import barImg from '../assets/images/textFile.png';
 function GitHubSection() {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const isMounted = useRef(false); // Variable para comprobar si ya se ejecutó
     const windowName = "repositorios.txt";
     const windowColor = "#0D7C66";
@@ -18,12 +19,15 @@ function GitHubSection() {
             const fecthRepos = async () => {
                 try {
                     const res = await fetch("https://api.github.com/users/luchomellu/repos");
+                    if (!res.ok) {
+                        throw new Error(`HTTP error! status: ${res.status}`);
+                    }
                     const data = await res.json();
-                    console.log(data);
                     setRepos(data);
                 }
                 catch (error) {
-                    console.log(error);
+                    console.error("Fetching error: ", error);
+                    setError(error.message);
                 } finally {
                     setLoading(false);
                 }
@@ -39,8 +43,10 @@ function GitHubSection() {
             <div className={styles.contenido}>
                 <div className={styles.listRepos}>
                     {loading ? (
-                        <h1>Cargando......</h1>
-                    ) : repos == [] ? (
+                        <div className={styles.loader} >Cargando...</div>
+                    ) : error ? (
+                        <h2>Error: {error}</h2>
+                    ) : repos.length === 0 ? (
                         <h2>No hay repositorios disponibles.</h2>
                     ) : (
                         <>

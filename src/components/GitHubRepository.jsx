@@ -11,15 +11,10 @@ const GitHubRepository = ( { repo } ) => {
           <a href={repo.svn_url}> 
             <h4>{repo.name}</h4> 
             <span class={styles.shortcut}> 
-              <img src={overlayShortcut}/>
+              <img src={overlayShortcut} alt='External link'/>
             </span>
           </a>
-          {repo.description != null ? (
-            <p>{repo.description}</p>
-          ) :
-          (
-            <p>Sin descripcion</p>
-          )}
+          <p>{repo.description || "Sin descripción"}</p>
         </div>
     </div>
   )

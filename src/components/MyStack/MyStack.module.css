@@ -1,0 +1,51 @@
+.myStack {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border: 3px solid #121212;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.carouselContainer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  overflow: auto;
+  user-select: none;
+  cursor: grab;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.slide img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.slide p {
+  font-size: 0.8rem;
+  color: #333;
+  text-align: center;
+}
+
